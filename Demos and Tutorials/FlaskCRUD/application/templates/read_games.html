@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body_content %}
+    <div class="display">
+        {% for game in games %}
+            {{ game.id.label }} {{ game.id }}
+            <br>
+            {{ game.name.label }} {{ game.name }}
+            <br>
+        {% endfor %}
+    </div>
+{% endblock %}

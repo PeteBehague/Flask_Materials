@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <meta charset="UTF-8">
+    <title>Flask Games CRUD</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('add') }}">Add Game</a>
+        <a href="{{ url_for('read') }}">View All Games</a>
+        <a href="{{ url_for('update') }}">Update Game</a>
+        <a href="{{ url_for('delete') }}">Delete Game</a>
+        <a href="{{ url_for('count') }}">Count</a>
+    </div>
+    {% block body_content %}{% endblock %}
+</body>
+</html>
