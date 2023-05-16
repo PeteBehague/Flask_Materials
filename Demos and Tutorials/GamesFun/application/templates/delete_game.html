@@ -1,0 +1,19 @@
+{% extends "layout_master.html" %}
+{% block body_content %}
+    <h1>Delete a game:</h1>
+    <p>
+        <div class='form'>
+            <form method='POST' action=''>
+                <!-- hidden_tag() is required for form validation -->
+                {{ form.hidden_tag() }}
+                <!-- Each field displays its label followed by the input field itself -->
+                {{ form.name.label }} {{ form.name }}
+                <br>
+                <!-- form.submit is a button -->
+                {{ form.submit }}
+                <br>
+            </form>
+            {{ message }}
+        </div>
+    </p>
+{% endblock body_content %}

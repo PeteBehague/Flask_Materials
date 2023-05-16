@@ -1,0 +1,23 @@
+{% extends "layout_master.html" %}
+{% block body_content %}
+    <section>
+        <h1>Add a new game:</h1>
+        <p>
+            <div class='form'>
+                <form method='POST' action=''>
+                    <!-- hidden_tag() is required for form validation -->
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        <!-- Each field displays its label followed by the input field itself -->
+                        {{ form.name.label }} {{ form.name }}
+                        <br>
+                        <!-- form.submit is a button -->
+                        {{ form.submit }}
+                        <br>
+                    </div>
+                </form>
+                {{ message }}
+            </div>
+        </p>
+    </section>
+{% endblock body_content %}

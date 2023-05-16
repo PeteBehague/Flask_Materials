@@ -1,0 +1,15 @@
+{% extends 'layout_master.html' %}
+{% block body %}
+    {% if x > y %}
+        <h1>{{ x }} is greater than {{ y }}</h1>
+    {% else %}
+        <h1>{{ x }} is not greater than {{ y }}</h1>
+    {% endif %}
+
+    {% for user in employees %}
+        {% if user[0].upper() == search_char %}
+            <p>{{ user.title() }}</p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock body %}

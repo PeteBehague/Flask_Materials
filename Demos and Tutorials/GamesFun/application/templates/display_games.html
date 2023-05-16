@@ -1,0 +1,6 @@
+{% extends "layout_master.html" %}
+{% block body_content %}
+    {% for game in games %}
+        {{ game.id }}: {{ game.name }}<br>
+    {% endfor %}
+{% endblock body_content %}

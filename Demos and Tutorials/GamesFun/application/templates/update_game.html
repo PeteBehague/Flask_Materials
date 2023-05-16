@@ -1,0 +1,21 @@
+{% extends "layout_master.html" %}
+{% block body_content %}
+    <h1>Update the name of a game:</h1>
+    <p>
+        <div class='form'>
+            <form method='POST' action=''>
+                <!-- hidden_tag() is required for form validation -->
+                {{ form.hidden_tag() }}
+                <!-- Each field displays its label followed by the input field itself -->
+                {{ form.oldname.label }} {{ form.oldname }}
+                <br>
+                {{ form.newname.label }} {{ form.newname }}
+                <br>
+                <!-- form.submit is a button -->
+                {{ form.submit }}
+                <br>
+            </form>
+            {{ message }}
+        </div>
+    </p>
+{% endblock body_content %}
