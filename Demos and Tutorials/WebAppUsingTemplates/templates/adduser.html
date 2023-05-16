@@ -1,0 +1,32 @@
+    {% extends 'layout.html' %}
+    {% block body %}
+        <div class='form'>
+           <form method='POST' action=''>
+               {{ form.first_name.label }}
+               {{ form.first_name }}
+               <br>
+               {% if form.first_name.errors %}
+                <div class='error'>
+                    {% for error in form.first_name.errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+               {% endif %}
+               <br>
+               {{ form.last_name.label }}
+               {{ form.last_name }}
+               <br>
+               {{ form.dob.label }}
+               {{ form.dob }}
+               <br>
+               {{ form.favourite_number.label }}
+               {{ form.favourite_number }}
+               <br>
+               {{ form.favourite_food.label }}
+               {{ form.favourite_food }}
+               <br>
+               {{ form.submit }}
+           </form>
+           {{ message }}
+        </div>
+    {% endblock body %}

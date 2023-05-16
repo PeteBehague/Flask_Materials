@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body_content %}
+    <div class="display">
+         <table id="data" class="table table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for game in games %}
+                <tr>
+                  <td>{{ game.id }}</td>
+                  <td>{{ game.name }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+         </table>
+    </div>
+{% endblock %}
